@@ -1,0 +1,130 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: Tahoma, Verdana, sans-serif;
+}
+
+
+.layout {
+  width: 875px;
+  margin: auto;
+}
+
+.question {
+  padding-top: 2rem;
+  text-align: center;
+  font-size: 2rem;
+}
+
+input[type="text"] {
+  border: 2px solid gray;
+  border-radius: 5px;
+  padding: 0px 8px;
+  background: none;
+}
+
+input[type="text"].wrong {
+  color: red;
+}
+.question input[type="text"] {
+  font-size: 2rem;
+  width: 4rem
+}
+
+.axis input[type="text"] {
+  /* box-sizing: border-box; */
+  width: 2em;
+  height: 2em;
+  /* margin: auto; */
+  /* margin-top: -50px; */
+  position: relative;
+  top: -2.5em;
+  font-size: 14px;
+}
+
+.axis {
+  height: 300px;
+  width: 875px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  background: url("img/sprite.png");
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: bottom left;
+  /* border: 1px solid black; */
+  padding-bottom: 64px;
+  padding-left: 35px;
+  padding-right: 58px;
+  text-align: center;
+}
+
+.semicircle {
+  border: 3px solid rgba(255, 0, 255, 0.5);
+  border-width: 3px 3px 0 3px;
+  /* margin: auto; */
+  /* border-radius: 50%; */
+  border-top-left-radius: 50% 100%;
+  border-top-right-radius: 50% 100%;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  position: relative;
+
+}
+
+.semicircle::after {
+  /* display: inline-block;
+  content: " ";
+  position: relative;
+  left: 1px;
+  bottom: 1px;
+  width: 7px;
+  height: 7px;
+  border: solid rgba(255, 0, 255, 0.5);
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg); */
+  box-sizing: border-box;
+  content: " ";
+  display: inline-block;
+  border-left: 8px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 12px solid #ff7fff;
+  position: absolute;
+  bottom: 0;
+  right: -7px;
+  transform: rotate(-9deg);
+}
+
+.a-line {
+  width: 273px;
+  height: 91px;
+}
+
+.b-line {
+  width: 156px;
+  height: 50px;
+}
+
+.question span {
+  padding: 0 5px;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+span.wrong {
+  background: orange;
+}
+
+#question-mark {
+  /* display: none; */
+}
+
+#answer {
+  display: none;
+}
