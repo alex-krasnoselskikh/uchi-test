@@ -25,11 +25,19 @@ input[type="text"] {
   border-radius: 5px;
   padding: 0px 8px;
   background: none;
+  font-size: 1rem;
 }
 
 input[type="text"].wrong {
   color: red;
 }
+
+input[type="text"]:disabled {
+  border: none;
+  font-size: 1rem;
+  color: inherit;
+}
+
 .question input[type="text"] {
   font-size: 2rem;
   width: 4rem
@@ -43,7 +51,6 @@ input[type="text"].wrong {
   /* margin-top: -50px; */
   position: relative;
   top: -2.5em;
-  font-size: 14px;
 }
 
 .axis {
@@ -109,6 +116,7 @@ input[type="text"].wrong {
 .b-line {
   width: 156px;
   height: 50px;
+  display: block
 }
 
 .question span {
@@ -122,9 +130,9 @@ span.wrong {
 }
 
 #question-mark {
-  /* display: none; */
+  display: none;
 }
 
 #answer {
-  display: none;
+  /* display: none; */
 }
