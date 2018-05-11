@@ -116,7 +116,8 @@ input[type="text"]:disabled {
 .b-line {
   width: 156px;
   height: 50px;
-  display: block
+  /* display: block */
+  display: none;
 }
 
 .question span {
@@ -130,9 +131,10 @@ span.wrong {
 }
 
 #question-mark {
-  display: none;
+  /* display: none; */
+  display: inline-block;
 }
 
-#answer {
-  /* display: none; */
+#final-answer {
+  display: none;
 }

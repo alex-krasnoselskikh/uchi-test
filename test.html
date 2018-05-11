@@ -12,18 +12,19 @@
 <body>
   <div class="layout">
     <div class="question">
-      <span id="a" class="wrong">7</span> + <span id="b">4</span> = <span id="question-mark">?</span>
-      <input type="text" id="answer" maxlength="2" size="2" class="">
+      <span id="a" class="a">7</span> + <span id="b" class="b">4</span> = <span id="question-mark">?</span>
+      <input type="text" id="final-answer" maxlength="2" size="2" class="">
     </div>
     <div class="axis">
-      <div class="a-line semicircle">
-        <input type="text" class="wrong" id="a-input" maxlength="1" size="1" >
+      <div class="a-line semicircle" id="a-line">
+        <input type="text" class="a" id="a-input" maxlength="1" size="1" >
       </div>
-      <div class="b-line semicircle">
-        <input type="text" id="b-input" maxlength="1" size="1" disabled>
+      <div class="b-line semicircle" id="b-line">
+        <input type="text" id="b-input" class="b" maxlength="1" size="1">
       </div>
     </div>
   </div>
+  <script src="script.js"></script>
 </body>
 
 </html>
