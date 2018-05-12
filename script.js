@@ -1,5 +1,5 @@
 
-function showAddition(a, b) {
+function showAddition() {
   const spanA = document.getElementById("a"),
     spanB = document.getElementById("b"),
     inputA = document.getElementById("a-input"),
@@ -8,6 +8,9 @@ function showAddition(a, b) {
     lineA = document.getElementById("a-line"),
     lineB = document.getElementById("b-line"),
     unit = 39;
+  
+  const a = getRandomInt(6, 9);
+  const b = getRandomInt(11 - a, 14 - a);
   
   inputA.value = "";
   inputB.value = "";
@@ -46,7 +49,7 @@ function showAddition(a, b) {
         .forEach(element => element.classList.remove("wrong"));
       event.target.disabled = true;
       document.getElementById("question-mark").style.display = "none";
-      document.getElementById("final-answer").style.display = "inline-block";
+      finalAnswer.style.display = "inline-block";
     }
 
   });
@@ -61,4 +64,10 @@ function showAddition(a, b) {
    });
 }
 
-document.addEventListener("DOMContentLoaded", showAddition(6, 2));
+function getRandomInt(min, max) {
+  // min = Math.ceil(min);
+  // max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+document.addEventListener("DOMContentLoaded", showAddition());
