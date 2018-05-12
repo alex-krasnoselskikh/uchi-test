@@ -61,4 +61,4 @@ function showAddition(a, b) {
    });
 }
 
-document.addEventListener("DOMContentLoaded", showAddition(8, 5));
+document.addEventListener("DOMContentLoaded", showAddition(6, 2));
