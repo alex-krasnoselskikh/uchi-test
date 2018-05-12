@@ -1,22 +1,28 @@
 
-function showAdd(a, b) {
-  const spanA = document.getElementById("a");
-  const spanB = document.getElementById("b");
+function showAddition(a, b) {
+  const spanA = document.getElementById("a"),
+    spanB = document.getElementById("b"),
+    inputA = document.getElementById("a-input"),
+    inputB = document.getElementById("b-input"),
+    finalAnswer = document.getElementById("final-answer"),
+    lineA = document.getElementById("a-line"),
+    lineB = document.getElementById("b-line"),
+    unit = 39;
+  
+  inputA.value = "";
+  inputB.value = "";
+  finalAnswer.value = "";
   
   spanA.innerHTML = a;
   spanB.innerHTML = b;
 
-  const lineA = document.getElementById("a-line");
-  const lineB = document.getElementById("b-line");
-  const unit = 39;
-  
   lineA.style.width = a * unit + "px";
   lineA.style.height = (a * unit) / 3 + "px";
 
   lineB.style.width = b * unit + "px";
   lineB.style.height = (b * unit) / 3 + "px";
 
-  const inputA = document.getElementById("a-input");
+  
   inputA.addEventListener("input", function(event) {
     // console.log(event.target);
     if (event.target.value != a) {
@@ -29,7 +35,7 @@ function showAdd(a, b) {
       lineB.style.display = "block";
     }
   });
-  const inputB = document.getElementById("b-input");
+  
   inputB.addEventListener("input", function(event) {
     // console.log(event.target);
     if (event.target.value != b) {
@@ -39,11 +45,12 @@ function showAdd(a, b) {
       document.querySelectorAll(".b")
         .forEach(element => element.classList.remove("wrong"));
       event.target.disabled = true;
+      document.getElementById("question-mark").style.display = "none";
+      document.getElementById("final-answer").style.display = "inline-block";
     }
-    document.getElementById("question-mark").style.display = "none";
-    document.getElementById("final-answer").style.display = "inline-block";
+
   });
-  const finalAnswer = document.getElementById("final-answer");
+
   finalAnswer.addEventListener("input", function (event) {
     if (event.target.value != a + b) {
       event.target.classList.add("wrong");
@@ -51,8 +58,7 @@ function showAdd(a, b) {
       event.target.classList.remove("wrong");
       event.target.disabled = true;
     }
-
    });
 }
 
-document.addEventListener("DOMContentLoaded", showAdd(8, 5));
+document.addEventListener("DOMContentLoaded", showAddition(8, 5));

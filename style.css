@@ -33,6 +33,7 @@ input[type="text"].wrong {
 }
 
 input[type="text"]:disabled {
+  /* border: transparent; */
   border: none;
   font-size: 1rem;
   color: inherit;
@@ -44,11 +45,8 @@ input[type="text"]:disabled {
 }
 
 .axis input[type="text"] {
-  /* box-sizing: border-box; */
   width: 2em;
   height: 2em;
-  /* margin: auto; */
-  /* margin-top: -50px; */
   position: relative;
   top: -2.5em;
 }
@@ -80,22 +78,9 @@ input[type="text"]:disabled {
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
   position: relative;
-
 }
 
 .semicircle::after {
-  /* display: inline-block;
-  content: " ";
-  position: relative;
-  left: 1px;
-  bottom: 1px;
-  width: 7px;
-  height: 7px;
-  border: solid rgba(255, 0, 255, 0.5);
-  border-width: 0 2px 2px 0;
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg); */
   box-sizing: border-box;
   content: " ";
   display: inline-block;
@@ -124,6 +109,7 @@ input[type="text"]:disabled {
   padding: 0 5px;
   border-radius: 5px;
   display: inline-block;
+  background: inherit;
 }
 
 span.wrong {
