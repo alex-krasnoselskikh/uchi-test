@@ -9,26 +9,25 @@ function showAddition() {
     lineB = document.getElementById("b-line"),
     unit = 39;
   
-  const a = getRandomInt(6, 9);
-  const b = getRandomInt(11 - a, 14 - a);
+  const numberA = getRandomInt(6, 9);
+  const numberB = getRandomInt(11 - numberA, 14 - numberA);
   
   inputA.value = "";
   inputB.value = "";
   finalAnswer.value = "";
   
-  spanA.innerHTML = a;
-  spanB.innerHTML = b;
+  spanA.innerHTML = numberA;
+  spanB.innerHTML = numberB;
 
-  lineA.style.width = a * unit + "px";
-  lineA.style.height = (a * unit) / 3 + "px";
+  lineA.style.width = numberA * unit + "px";
+  lineA.style.height = (numberA * unit) / 3 + "px";
 
-  lineB.style.width = b * unit + "px";
-  lineB.style.height = (b * unit) / 3 + "px";
+  lineB.style.width = numberB * unit + "px";
+  lineB.style.height = (numberB * unit) / 3 + "px";
 
   
   inputA.addEventListener("input", function(event) {
-    // console.log(event.target);
-    if (event.target.value != a) {
+    if (event.target.value != numberA) {
       document.querySelectorAll(".a")
         .forEach(element => element.classList.add("wrong"));
     } else {
@@ -40,8 +39,7 @@ function showAddition() {
   });
   
   inputB.addEventListener("input", function(event) {
-    // console.log(event.target);
-    if (event.target.value != b) {
+    if (event.target.value != numberB) {
       document.querySelectorAll(".b")
         .forEach(element => element.classList.add("wrong"));
     } else {
@@ -55,7 +53,7 @@ function showAddition() {
   });
 
   finalAnswer.addEventListener("input", function (event) {
-    if (event.target.value != a + b) {
+    if (event.target.value != numberA + numberB) {
       event.target.classList.add("wrong");
     } else {
       event.target.classList.remove("wrong");
@@ -65,8 +63,6 @@ function showAddition() {
 }
 
 function getRandomInt(min, max) {
-  // min = Math.ceil(min);
-  // max = Math.floor(max);
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
